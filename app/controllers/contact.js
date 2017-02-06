@@ -12,14 +12,14 @@ export default Ember.Controller.extend({
   
   isDisabled: Ember.computed.not('isValid'),
 
-  myMessage: Ember.computed('message', function() { 
+  myMessage: Ember.computed('message', function(){ 
     console.log('myMessage function is called: ', this.get('message'));
     console.log('message valid : ', this.get('message'));
   }),
 
   actions: {
     sendMessage() {
-      console.log("hey")
+      console.log("hey");
       // alert(`Email: ${this.get('email')} \n message: ${this.get('message')}`);
       const email = this.get('email');
       const message = this.get('message');
